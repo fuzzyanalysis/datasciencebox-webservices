@@ -7,12 +7,12 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 @ApplicationPath("/")
-public class DataScienceBoxRESTApplication extends Application {
+public class RESTApplication extends Application {
 
 	private Set<Object> singletons = new HashSet<Object>();
 	private Set<Class<?>> empty = new HashSet<Class<?>>();
-	public DataScienceBoxRESTApplication(){
-	     singletons.add(new DataScienceBoxResource());
+	public RESTApplication(){
+	     singletons.add(new Resources());
 	}
 	@Override
 	public Set<Class<?>> getClasses() {
