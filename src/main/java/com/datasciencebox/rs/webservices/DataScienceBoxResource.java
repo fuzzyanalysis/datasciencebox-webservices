@@ -11,9 +11,16 @@ import javax.ws.rs.Path;
 import com.maxmind.geoip.Location;
 import com.maxmind.geoip.LookupService;
 
-@Path("/DataScienceBoxRESTApplication")
+@Path("/dsbws")
 public class DataScienceBoxResource {
 
+	@Path("/test")
+	@GET()
+	@Produces("text/text")
+	public String test(){
+		return "The web services works.";
+	}
+	
 	@Path("/geolocation/{ip}")
 	@GET()
 	@Produces("application/json")
