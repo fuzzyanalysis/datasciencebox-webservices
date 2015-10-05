@@ -7,13 +7,13 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
 @Path("/rest")
-public class Resources {
-
+public class DSBResources {
+	
 	@Path("/test")
 	@GET()
-	@Produces("text/text")
+	@Produces("text/html")
 	public String test(){
-		return "The web services works.";
+		return "<html><body>The web services work.</body></html>";
 	}
 	
 	@Path("/geolocation/{ip}")

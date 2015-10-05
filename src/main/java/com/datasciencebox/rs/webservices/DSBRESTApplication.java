@@ -7,12 +7,12 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 @ApplicationPath("/")
-public class RESTApplication extends Application {
+public class DSBRESTApplication extends Application {
 
 	private Set<Object> singletons = new HashSet<Object>();
 	private Set<Class<?>> empty = new HashSet<Class<?>>();
-	public RESTApplication(){
-	     singletons.add(new Resources());
+	public DSBRESTApplication(){
+	     singletons.add(new DSBResources());
 	}
 	@Override
 	public Set<Class<?>> getClasses() {
